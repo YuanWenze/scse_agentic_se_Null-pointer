@@ -11,6 +11,9 @@ def validate_requirements(data):
         if key not in data:
             return False
 
+    if len(data) != 4:
+        return False
+
     if not isinstance(data["goal"], str):
         return False
     if not isinstance(data["allowed_actions"], list):
@@ -25,7 +28,6 @@ def validate_requirements(data):
             return False
 
     return True
-
 
 def run_analyst(brief_text):
     system_prompt = """
