@@ -1,0 +1,56 @@
+### **Functional Requirements**
+1. **Path Direction Input Handling**
+   - The system must process input indicating whether the path in front, to the left, and to the right is blocked.
+
+   - The system must process input indicating the direction of the robot’s goal (ahead, left, or right).
+
+2. **Goal-Oriented Movement**
+   - The robot must prioritize moving toward its goal whenever it can do so safely (i.e., the path to the goal is
+not blocked).
+   - If the goal is ahead, the robot must attempt to move forward if the forward path is unblocked.
+   - If the goal is to the left, the robot must attempt to move left if the left path is unblocked.
+   - If the goal is to the right, the robot must attempt to move right if the right path is unblocked.
+
+3. **Obstacle Avoidance**
+   - The robot must never move into a blocked direction (front, left, or right).
+   - If all directions are blocked, the robot must stop and remain stationary.
+
+4. **Stop Condition**
+   - If no safe direction exists to move toward the goal, the robot must stop and halt all movement.
+
+---
+
+### **Non-Functional Requirements**
+1. **Real-Time Operation**
+   - The system must process sensor inputs and make movement decisions in real time with minimal latency.
+
+2. **Simulation Compatibility**
+   - The system must support testing in simulated environments, including handling simulated sensor data and
+virtual obstacles.
+
+3. **Robustness**
+   - The system must handle edge cases, such as:
+     - The goal being in a blocked direction.
+     - All directions being blocked (e.g., surrounded by obstacles).
+
+---
+
+### **Safety and Compliance**
+1. **Safety Constraints**
+   - The robot must never move into a blocked direction, even if the goal is in that direction.
+   - The robot must stop immediately if no safe movement options are available.
+
+2. **Testability**
+   - The system must be designed for easy testing in simulated environments, including scenarios with varying
+obstacle configurations and goal positions.
+
+---
+
+### **Edge Case Handling**
+- If the goal is ahead but the forward path is blocked, the robot must check left and right directions for
+alternative paths.
+- If the goal is to the left but the left path is blocked, the robot must check the forward and right directions.
+
+- If the goal is to the right but the right path is blocked, the robot must check the forward and left directions.
+
+- If all directions are blocked, the robot must stop and remain stationary.
