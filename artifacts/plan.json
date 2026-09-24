@@ -1,0 +1,8 @@
+{
+  "priority": [
+    "FORWARD",
+    "LEFT",
+    "RIGHT"
+  ],
+  "fallback": "STOP"
+}

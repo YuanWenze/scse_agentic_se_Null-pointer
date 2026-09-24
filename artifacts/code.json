@@ -1,0 +1,15 @@
+{
+  "function_name": "navigate",
+  "steps": [
+    "if path ahead is not blocked: return FORWARD",
+    "if path left is not blocked: return LEFT",
+    "if path right is not blocked: return RIGHT",
+    "return STOP"
+  ],
+  "actions_used": [
+    "FORWARD",
+    "LEFT",
+    "RIGHT",
+    "STOP"
+  ]
+}
