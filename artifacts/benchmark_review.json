@@ -1,0 +1,9 @@
+{
+  "issue": "Goal completion failure",
+  "likely_cause": "Navigation logic may not handle all states",
+  "recommendation": "Consider revisiting the navigation logic and goal detection mechanisms",
+  "safety_passed": true,
+  "goal_completion_passed": false,
+  "efficiency_passed": false,
+  "needs_revision": true
+}

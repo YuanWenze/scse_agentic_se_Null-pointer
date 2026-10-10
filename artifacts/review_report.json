@@ -1,0 +1,6 @@
+{
+  "issue": "No issues detected in the simulation.",
+  "likely_cause": "All scenarios passed without any errors.",
+  "recommendation": "No revisions are needed as the robot performed correctly in all test cases.",
+  "needs_revision": false
+}
