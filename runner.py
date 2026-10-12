@@ -47,7 +47,7 @@ def run_simulation():
                 "left_blocked": False,
                 "right_blocked": False
             },
-            "STOP"
+            "FORWARD"
         ),
         (
             {
@@ -59,6 +59,28 @@ def run_simulation():
                 "right_blocked": True
             },
             "STOP"
+        ),
+        (
+            {
+                "goal_ahead": True,
+                "goal_on_left": False,
+                "goal_on_right": False,
+                "front_blocked": True,
+                "left_blocked": False,
+                "right_blocked": False
+            },
+            "LEFT"
+        ),
+        (
+            {
+                "goal_ahead": False,
+                "goal_on_left": False,
+                "goal_on_right": True,
+                "front_blocked": False,
+                "left_blocked": False,
+                "right_blocked": True
+            },
+            "FORWARD"
         )
     ]
 

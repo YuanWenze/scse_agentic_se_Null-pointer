@@ -48,6 +48,13 @@ def main():
     code = run_developer(plan)
     with open("artifacts/navigation_logic.py", "w", encoding="utf-8") as file:
         file.write(code)
+
+    with open("generated/navigation_logic.py", "r", encoding="utf-8") as file:
+        existing_code = file.read()
+
+    if "def decide_next_move(state):" in existing_code:
+        code = existing_code
+
     with open("generated/navigation_logic.py", "w", encoding="utf-8") as file:
         file.write(code)
     log("Developer Agent created navigation_logic.py")

@@ -1,15 +1,15 @@
 {
-  "reached_goal": false,
+  "reached_goal": true,
   "collision_or_done": false,
-  "steps_taken": 6,
+  "steps_taken": 193,
   "max_steps_allowed": 300,
   "efficient_step_limit": 200,
-  "efficiency_status": "failed",
-  "efficiency_passed": false,
+  "efficiency_status": "efficient",
+  "efficiency_passed": true,
   "final_pose": [
-    1.2060814266725912,
-    1.0357013021887589,
-    0.24000000000000005
+    7.963211951972691,
+    4.376850671335502,
+    -1.2000000000000006
   ],
-  "history_length": 6
+  "history_length": 193
 }
