@@ -1,11 +1,11 @@
 import json
 from ollama import chat
-
 system_prompt = """
 You are a developer agent for a mobile robot.
 Read the navigation plan in JSON format.
 Generate Python code for a function called decide_next_move(state).
 Output ONLY the Python code. Do not write anything else.
+Do NOT include any markdown formatting, emoji, bullet points, or explanatory text.
 
 The state parameter is a dictionary with these keys:
 "goal_ahead": True or False
@@ -28,7 +28,6 @@ def decide_next_move(state):
     return "STOP"
 """
 
-
 def validate_code(code):
     if not isinstance(code, str):
         return False
@@ -37,7 +36,6 @@ def validate_code(code):
         return False
 
     return True
-
 
 def run_developer(plan):
     plan_text = json.dumps(plan)
@@ -57,13 +55,13 @@ def run_developer(plan):
     else:
         return None
 
-
 def run_developer_revision(original_code, review_notes, benchmark_report, requirements, plan):
     revision_system_prompt = """
 You are a developer agent for a mobile robot.
 You will receive the original navigation code, review notes, benchmark report, requirements and plan.
 Generate a revised version of the decide_next_move(state) function.
 Output ONLY the Python code. Do not write anything else.
+Do NOT include any markdown formatting, emoji, bullet points, or explanatory text.
 
 The state parameter has these keys:
 "goal_ahead", "goal_on_left", "goal_on_right",
